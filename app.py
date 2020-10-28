@@ -6,7 +6,6 @@ from plotly import graph_objects as go
 from dash.dependencies import Input, Output
 import plotly.express as px
 from dash.exceptions import PreventUpdate
-from app import server
 
 
 # Creating a class (Dash) and declared it globally..
