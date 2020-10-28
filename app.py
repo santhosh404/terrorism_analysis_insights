@@ -10,7 +10,7 @@ from dash.exceptions import PreventUpdate
 
 # Creating a class (Dash) and declared it globally..
 app = dash.Dash()
-server = app.server
+
 
 #Defining the Loading Data
 def load_data():
@@ -434,6 +434,7 @@ def main():
     load_data()
     #print(df.sample(5))
     global app
+    server = app.server
     app.layout = create_app_ui()
     app.title = 'Terrorism Analysis with Insights'
     app.run_server(debug = True)
