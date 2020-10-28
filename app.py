@@ -6,6 +6,7 @@ from plotly import graph_objects as go
 from dash.dependencies import Input, Output
 import plotly.express as px
 from dash.exceptions import PreventUpdate
+from app import server
 
 
 # Creating a class (Dash) and declared it globally..
@@ -436,7 +437,7 @@ def main():
     global app
     app.layout = create_app_ui()
     app.title = 'Terrorism Analysis with Insights'
-    app.run_server(debug = False)
+    app.run_server(debug = True)
     
     df = None
     app = None
