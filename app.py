@@ -435,7 +435,6 @@ def main():
     global app
     app.layout = create_app_ui()
     app.title = 'Terrorism Analysis with Insights'
-    server = app.server
     app.run_server(debug = False)
     
     df = None
