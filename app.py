@@ -433,9 +433,9 @@ def main():
     load_data()
     #print(df.sample(5))
     global app
-    server = app.server
     app.layout = create_app_ui()
     app.title = 'Terrorism Analysis with Insights'
+    server = app.server
     app.run_server(debug = False)
     
     df = None
