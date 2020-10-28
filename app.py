@@ -5,7 +5,6 @@ import dash_html_components as html
 from plotly import graph_objects as go
 from dash.dependencies import Input, Output
 import plotly.express as px
-import webbrowser
 from dash.exceptions import PreventUpdate
 
 
@@ -77,12 +76,7 @@ def load_data():
     chart_dropdown_values = [{"label" : keys, "value" : values} for keys, values in chart_dropdown_values.items()]
     
     
-    
-    
-    
-def open_browser():
-    webbrowser.open_new('http://127.0.0.1:8050/')
-    
+ 
     
     
 # Creating the Interface of my app ie..UI    
@@ -436,12 +430,11 @@ def main():
     print('Starting the main Function..')
     
     load_data()
-    open_browser()
     #print(df.sample(5))
     global app
     app.layout = create_app_ui()
     app.title = 'Terrorism Analysis with Insights'
-    app.run_server()
+    app.run_server(debug = False)
     
     df = None
     app = None
