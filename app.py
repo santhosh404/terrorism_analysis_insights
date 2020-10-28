@@ -10,6 +10,7 @@ from dash.exceptions import PreventUpdate
 
 # Creating a class (Dash) and declared it globally..
 app = dash.Dash()
+server = app.server
 
 #Defining the Loading Data
 def load_data():
